@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+            body {
+                background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShbE4SYCAIRb18T6LFwfxZ2vBfnpt_pSiu6A&usqp=CAU');
+            
+            }
+            form 
+            {
+                font-size: 25px;
+            background-color: rgba(217, 223, 207, 0.692);
+            padding:10px;
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+             margin: 0 0 15px;
+             border: 2px;
+             border: solid 5px black;
+             text-align: center;
+             width: 55%;
+             height: 70%;
+             box-sizing: border-box;
+            margin-left: 25%;
+        margin-top: 5%;
+        }
+        h2 {
+            text-align: center;
+            padding:9px;
+            margin-top: 10px;
+            font-size: 40PX;
+           background-color: rgb(225, 228, 53);
+           width: 30%;
+           margin-left: 35%;
+           border: double 4px black;
+           }
+           .vsv:hover
+            {
+            color: black;
+            background-color: rgb(82, 141, 230);
+           }
+           .vsv
+           {
+               background-color: rgb(225, 228, 53);
+               margin-right: 10% ;
+           }
+        
+        </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+      </script>
+        
+    </head>
+
+    <body>
+        <h2>TOTAL CHARGES</h2>
+        <form action="validatetotal.php" method="POST">
+            <label for="roomno">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Room No Of Customer:</label>
+            <input type="number" id="roomno" name="room" min="101" max="10000" required><br>
+
+            <label for="USER">Rent Price(1BHK,2BHK,3BHK):</label>
+            <input type="number" id="USER" name="price" min="2000" max="20000" step="2000" required><br>
+
+            <label for="fast">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Breakfast(Rs:120/person):</label>
+            <input type="number" id="fast" name="breakfast" min="120" max="10000" step="120" required><br>
+
+            <label for="ex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Extra Bed(Rs:500/person):  </label>
+            <input type="number" id="ex" name="extrabed" min="500" max="10000" step="500" required><br>
+
+            <label for="exx">&nbsp;&nbsp;Extra (Rs:50/beverages,snacks):</label>
+            <input type="number" id="exx" name="extra" min="50" max="10000" step="50"required ><br><br>
+
+            <Button class="vsv" name="enter" onclick="add()" >TOTAL</Button>
+            <p id="demo"> </p>
+
+            </form>
+            <script>
+                function add(){
+                var a = document.getElementById("USER").value;
+                var b = document.getElementById("fast").value;
+                var c = document.getElementById("ex").value;
+                var d = document.getElementById("exx").value;
+                var z = parseInt(a)+ parseInt(b)+ parseInt(c)+ parseInt(d);
+                var x =  document.getElementById("demo");
+               alert(z);
+                }
+            </script>
+        
+
+    </body>
+    </html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+            body {
+
+                background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVnopn5-8hGVkxmcTEWhH4Tua_9954bHbovw&usqp=CAU');
+                
+                }
+
+          h1 
+          { text-align: center;
+            margin: 40px;
+            margin-top: 2%;
+            font-size: 40PX;
+           color: black;
+           background-color: white;
+           width: 30%;
+           border: solid 2px black;
+           margin-left: 36%;
+           }
+            form 
+            {
+            font-size: 25px;
+            padding:10px;
+            border: solid 10px;
+            box-sizing: border-box;
+             margin: 0 0 15px;
+             background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ5k7SeF09QI5Nkrl1bOz7NWYmQu02apFRrw&usqp=CAU');
+             border-style: solid;
+             text-align: center;
+             width: 35%;
+            margin-left: 34%;
+            margin-top: 3%;
+
+       
+        }
+       .vs:hover
+       {
+        color:black;
+          background-color: rgba(6, 79, 88, 0.404);
+       }
+
+        </style>
+    </head>
+    <body>
+         <h1>Customer Details</h1>
+        <form action="validatecustomer.php" method="POST">
+            
+            <label for="username">CUSTOMER NAME:<br></label>
+            <input type="text" id="usernmae" name="name" required ><br>
+            <label for="text1">CUSTOMER EMAIL-ID:<br></label>
+            <input type="email" id="text1" name="email"required > <br>
+            <label for="phone">CUSTOMER MOBILE NUMBER:<br></label>
+            <input type="tel" id="phone" name="phone"required ><br>
+            <label for="address">CUSTOMER ADDRESS:<br></label>
+            <input type="text" id="address" name="address" required><br>
+            <label for="proof">TYPE OF PROOF:<br></label>
+            <input type="text" id="proof" name="proof" required><br>
+            <label for="roomno">ROOM NO:<br></label>
+           <input type="text" id="roomno" name="roomno"required > <br>
+            <label for="flr">FLOOR:<br></label>
+            <input type="number" id="flr" name="floor" min="1" ><br>
+            <label for="PPL">NO-OF-PPL<br></label>
+            <input type="number" id="PPL" name="no-of-ppl" min="1" required ><br>
+            <label for="checkin">CHECK-IN:</label><br>
+            <input type="date" id="checkin" name="check-in" required> <br>
+            <label for="checkout">CHECK-OUT:</label><br>
+            <input type="date" id="checkout" name="check-out" required> <br>
+            <input type="submit" class="vs" VALUE ="SUBMIT">
+        </form>
+    </body>
